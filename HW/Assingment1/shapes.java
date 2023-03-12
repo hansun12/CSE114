@@ -11,6 +11,6 @@ public class shapes {
         System.out.println("            ***********      *** ***           * *");
         System.out.println("                               ***              *");
 
-    }
+     }
 
 }
