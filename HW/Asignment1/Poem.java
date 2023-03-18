@@ -1,5 +1,5 @@
-//hansun song
-//song.hansun@stonybrook.edu
+package CSE114.HW.Asignment1;
+
 public class Poem {
     public static void main (String[] args) {
         System.out.println("There is a voive inside of you");
