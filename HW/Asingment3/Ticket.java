@@ -15,7 +15,10 @@ class Ticket {
         else if(age >= 7) rate = 20.0;
         else rate = 100.0;
 
-        System.out.printf("Age Discount is: %.2f %%\n", rate);
+        if(rate != 100.0){
+            System.out.printf("Age Discount is: %.2f %%\n", rate);
+        }
+    
         return rate;
     }
 
@@ -38,26 +41,26 @@ class Ticket {
         int age = sc.nextInt();
         double dcAge = calculatePriceByAge(age);
         double dcLuck = calculatePriceByLuck();
+        
+        // after calculate
+        if((int)dcAge == 100){
+            System.out.printf("\nYou're ticket price is 0.00\n");
+            sc.close();
+            return;
+        }
         if((int)dcLuck != 0){
             System.out.printf("Lucky discount is %.1f%% [You're a winner!]\n", dcLuck);
         }
         else {
             System.out.printf("\n");
         }
+        
         // calculate discount
-        if((int)dcAge == 100){
-            System.out.printf("You're ticket price is 0.00\n");
-
-            sc.close();
-            return;
-        }
-
-        price = price * ((100.0 - (dcAge + dcLuck)) / 100.0);
+        price = price * (100.0 - dcAge) / 100.0;
+        price = price * (100.0 - dcLuck) / 100.0;
         System.out.printf("You're ticket price is %.2f\n", price);
         
         sc.close();
-        // 6살 처리
-        // 곱 연산 처리
     }
 
 }
