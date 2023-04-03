@@ -28,12 +28,12 @@ public class testCraps {
         System.out.print("Play Craps(y/n): ");
         String play = sc.next();
         int point = 0;
-        while(play.equals("y")){
-            while(true){
+        while(play.equals("y")) {
+            while(true) {
                 int dice1 = Roll();
                 int dice2 = Roll();
 
-                System.out.printf("(%d, %d)",dice1, dice2);
+                System.out.printf("(%d, %d) ",dice1, dice2);
                 char res = evaluateRoll(point, dice1, dice2);
 
                 if(res == 'w') {
@@ -49,23 +49,24 @@ public class testCraps {
                 if(res == 'c') {
                     dice1 = Roll();
                     dice2 = Roll();
-                    System.out.printf("(%d, %d)", dice1, dice2);
+                    System.out.printf("(%d, %d) ", dice1, dice2);
                     evaluateRoll(point, dice1, dice2);
                     if(dice1 + dice2 == 7) {
-                        System.out.print("Player Looses!");
+                        System.out.println("Player Looses!");
                         break;
                     }
                     if(dice1 + dice2 == point) {
-                        System.out.print("Player Wins!");
+                        System.out.println("Player Wins!");
                         break;
                     }
                 }
                 if(res == 'p') {
                     point = dice1 + dice2;
-                    System.out.printf("%d:",point);
-                    break;
+                    System.out.printf("point: %d ",point);
                 }
             }
+            System.out.print("Play again?(y/n): ");
+            play = sc.next();
         }
     }
 }
