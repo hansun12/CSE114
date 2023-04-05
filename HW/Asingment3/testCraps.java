@@ -47,16 +47,18 @@ public class testCraps {
                     break;
                 }
                 if(res == 'c') {
-                    dice1 = Roll();
-                    dice2 = Roll();
-                    System.out.printf("(%d, %d) ", dice1, dice2);
-                    evaluateRoll(point, dice1, dice2);
+                    // dice1 = Roll();
+                    // dice2 = Roll();
+                    // System.out.printf("(%d, %d) ", dice1, dice2);
+                    // evaluateRoll(point, dice1, dice2);
                     if(dice1 + dice2 == 7) {
                         System.out.println("Player Looses!");
+                        point = 0;
                         break;
                     }
                     if(dice1 + dice2 == point) {
                         System.out.println("Player Wins!");
+                        point = 0;
                         break;
                     }
                 }
