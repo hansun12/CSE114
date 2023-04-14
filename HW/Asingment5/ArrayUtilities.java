@@ -12,11 +12,13 @@ public class ArrayUtilities {
     public static boolean occursIn(int[] array, int findMe) {
         // linear search => binary search
         for(int i = 0; i < array.length; i++) {
-            if(array[i] == findMe) return true;
+            if(array[i] == findMe) {
+                return true;
+            }
         }
         return false;
     }
-
+    //git tesssssssst
     public static int[] mergeIntArrays(int[] list1, int[] list2) {
         int[] res = new int[list1.length + list2.length];
         int index = 0;
