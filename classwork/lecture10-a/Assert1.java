@@ -52,15 +52,15 @@ public class Assert1 {
 //
 //              y < x         y == 0          count > 0
 //
-// Point A
+// Point A      S               S                 N
 //
-// Point B
+// Point B     A(if 통과해서)     S                 S (could be 0 or 1)
 //
-// Point C
+// Point C     A               A                 A
 //
-// Point D
+// Point D     S               S                 S
 //
-// Point E
+// Point E    N(while 안들어감)  S                 S
 //
 
 //
