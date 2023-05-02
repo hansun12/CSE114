@@ -8,24 +8,24 @@ public class UseLoan {
         // and see what you get
         // Case 1.
 
-        //        System.out.println(jims);
+            //    System.out.println(jims);
 
 
         // Do this again with the toString method added in Loan.java
         // and see what you get
         // Case 2.
-        //        System.out.println(jims);
+            //    System.out.println(jims);
 
         // In both cases 1 and 2, they are a shorthand version of this:
         //
-        //        System.out.println(jims.toString());
+            //    System.out.println(jims.toString());
 
         // In summary, try this twice: once with toString commented
         // out and once more with toString added in.
         // Case 3.
 
-        System.out.println("Loan information: " + jims);
-        System.out.println("Loan information: " + jims.toString());
+        // System.out.println("Loan information: " + jims);
+        // System.out.println("Loan information: " + jims.toString());
 
     }
 

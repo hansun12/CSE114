@@ -58,15 +58,15 @@ public class Assert3 {
 //
 //              next == 0    prev == 0     next == prev
 //
-// Point A
+// Point A         S             A               S
 //
-// Point B
+// Point B         N             S               S
 //
-// Point C
+// Point C		   N             N               A
 //
-// Point D
-//
-// Point E
+// Point D         S             N               S
+// 
+// Point E         A             S               S
 //
 
 //

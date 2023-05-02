@@ -9,19 +9,19 @@ public class Assert2 {
 	int a = r.nextInt(3) + 1;
 	int b = 2;
 
-	// Poi nt A
+	// Point A
 	while (n > b) {
-	    // Point B
+	    // Point B 
 	    b = b + a;
 
 	    if (a > 1) {
-		n--;
+			n--;
 
-		// Point C
-		a = r.nextInt(b) + 1;
+			// Point C
+			a = r.nextInt(b) + 1;
 	    } else {
-		a = b + 1;
-		// Point D
+			a = b + 1;
+			// Point D
 	    }
 	}
 
@@ -65,16 +65,15 @@ public class Assert2 {
 //
 //              n > b         a > 1          b > a
 //
-// Point A
+// Point A       S              S              S
 //
-// Point B
+// Point B		 A              S              S
 //
-// Point C
+// Point C .     S              A.             A
+// 
+// Point D .     S              N .            N      
 //
-// Point D
-//
-// Point E
-//
+// Point E .     N .            S .            S
 
 //
 

@@ -33,9 +33,9 @@ public class Loan {
     // Uncomment this method at the appropriate time as you
     // test UseLoan.java.
     //
-    /*
+    
     public String toString () {
         return "(" + name + ", " + balance + ")";
     }
-    */
+    
 }

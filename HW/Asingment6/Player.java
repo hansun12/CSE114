@@ -8,6 +8,7 @@ public class Player {
     public String hand;
     public double avg;
 
+
     Player(int no, String position, String name, String height, int weight, String hand, double avg) {
         this.no = no;
         this.position = position;

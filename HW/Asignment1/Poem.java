@@ -1,6 +1,10 @@
 package CSE114.HW.Asignment1;
 
 public class Poem {
+    Poem(){
+        System.out.println("aaa");
+    }
+
     public static void main (String[] args) {
         System.out.println("There is a voive inside of you");
         System.out.println("That whispers all day long,");
