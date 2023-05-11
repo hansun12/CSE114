@@ -1,23 +1,26 @@
-package CSE114.Lab.lab_15;
-
 public class Ball {
 
-    private int bounceCount;
-    private int totalBounces;
+    private static int bounceCount;
+    private static int totalBounces;
+    private static int numOfBalls;
 
-    public Ball(int bc, int tb) {
-        bounceCount = bc;
-        totalBounces = tb;
+    public Ball() {
+        numOfBalls++;
     }
 
-    public static void bounce() {
-        int bounceCount = 0;
+    public void bounce() {
+        bounceCount++;
+        totalBounces++;
     }
 
     public static int getTotalBounces() {
-        int totalBounces = 0;
+        return totalBounces / numOfBalls;
+    }
 
-        return totalBounces;
+    public void reset(int count) {
+        bounceCount = count;
+        totalBounces -= bounceCount;
+        totalBounces += count;
     }
 
 }

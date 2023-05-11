@@ -1,5 +1,5 @@
-package CSE114.Lab.lab_15;
-
 public class tryBall {
-    
+    public static void main(String[] args) {
+        System.out.println("test");
+    }
 }
