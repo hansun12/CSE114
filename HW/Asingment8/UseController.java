@@ -41,7 +41,7 @@ public class UseController {
 	System.out.println("msg1.returnReceiptRequested: " + msg1.getReturnReceiptRequested());
         System.out.println("msg1.subject:                " + msg1.getSubject());
         System.out.println("msg1.length:                 " + msg1.getLength());
-        System.out.println("msg1.body:                   " + msg1.getBody());
+        System.out.println("msg1.body:                  " + msg1.getBody());
         System.out.println();
 
         Message msg2 = new Message("onoh@gmail.com",
