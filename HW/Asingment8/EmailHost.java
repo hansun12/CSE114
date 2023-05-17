@@ -1,19 +1,15 @@
+//hansun song
+//114856519
 public class EmailHost {
-    private Message msg = new Message();
-    private Message[] message = new Message[100];
     private int capacity = 100;
+    private Message[] msgList;
     private int nextMessage;
     private String hostname;
 
-    public EmailHost() {
-        this.capacity = capacity;
-        this.nextMessage = nextMessage;
+    public EmailHost(String hostname) {
         this.hostname = hostname;
-    }
-
-    public EmailHost(int nextMessage, String hostname) {
-        this.nextMessage = nextMessage;
-        this.hostname = hostname;
+        this.msgList = new Message[capacity];
+        this.nextMessage = 0;
     }
     
     public String gethostName() {
@@ -21,12 +17,36 @@ public class EmailHost {
     }
 
     public void send(Message msg) {
+        if(nextMessage >= capacity) {
+            System.out.print("message list full");
+            return;
+        }
+
         if(msg.getTo().contains(hostname)) {
-            message = msg;
+            msgList[nextMessage++] = msg;
+        }
+        else {
+            System.out.println("bad host");
         }
     }
 
-    public Message[] getMessageForUser(String userEmail) {
+    public Message[] getMessagesForUser(String userEmail) {
+        int size = 0;
+        for(int i=0; i<nextMessage; i++) {
+            if(msgList[i].getTo().equals(userEmail)) {
+                size++;
+            }
+        }
 
+        System.out.println("Found " + size + " messages.");
+        Message[] res = new Message[size];
+        int index = 0;
+        for(int i=0; i<nextMessage; i++) {
+            if(msgList[i].getTo().equals(userEmail)) {
+                res[index++] = msgList[i];
+            }
+        }
+
+        return res;
     }
 }

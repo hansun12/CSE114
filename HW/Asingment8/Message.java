@@ -1,3 +1,5 @@
+//hansun song
+//114856519
 public class Message {
     private String from;
     private String to;
@@ -64,18 +66,26 @@ public class Message {
     public void setReturnReceiptRequested(boolean returnReceiptRequested) {
         this.returnReceiptRequested = returnReceiptRequested;
     }
+
+    public void setFrom(String from) {
+        this.from = from;
+    }
     
+    public void setDate(String date) {
+        this.date = date;
+    }
+
     public void setBody(String body) {
     	this.body = body;
     }
     
     public boolean isImportant() {
-    	if(this.date.contains("2023")) {
+    	if(this.date.contains("2022")) {
     		if(this.subject.contains("notice")) {
     			return true;
     		}
     	
-    		if(this.subject.contains("meeting")) {
+    		if(this.subject.contains("Meeting")) {
     			return true;
     		}
     	
@@ -87,17 +97,17 @@ public class Message {
     }
     
     public void print() {
-    	System.out.println("From: " + from);
-        System.out.println("To: " + to);
-        System.out.println("Date: " + date);
-        System.out.println("ReturnReceiptRequested: " + returnReceiptRequested);
-        System.out.println("Subject: " + subject);
-        System.out.println("Body: " + body);
-        System.out.println("Length: " + getLength());
-		
+    	System.out.println(" From: " + from);
+        System.out.println(" To: " + to);
+        System.out.println(" Date: " + date);
+        System.out.println(" ReturnReceiptRequested: " + returnReceiptRequested);
+        System.out.println(" Subject: " + subject);
+        System.out.println(" Length: " + getLength());
+        System.out.println(" Body: " + body);
+        System.out.println();
     }
     
     public String toString() {
-    	return "[To]: " + to +  "[From]: " + from +  "[Subject]: " + subject;
+        return "(" + from + ", " + to + ", " + subject + ")";
     }
 }
